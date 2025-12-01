@@ -1,0 +1,14 @@
+<!-- hrm_course_members_display/views/website_slides_members_display.xml -->
+<odoo>
+    <template id="website_slides_course_sidebar_members_display"
+              inherit_id="website_slides.course_sidebar"
+              name="Course Sidebar Members 587024 + Attendees">
+
+        <!-- Replace <td> of Members row -->
+        <xpath expr="//tr[th[normalize-space()='Members']]/td" position="replace">
+            <td>
+                <t t-esc="channel.fake_members_display"/>
+            </td>
+        </xpath>
+    </template>
+</odoo>
